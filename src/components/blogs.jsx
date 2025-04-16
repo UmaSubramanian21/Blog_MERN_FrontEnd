@@ -34,7 +34,7 @@ function Blog() {
     function submitBlog() {
         // own api
 
-        axios.post('http://localhost:7000/api/blog', { title: title, blog: Content }).then(
+        axios.post('https://blog-mern-backend-7vnd.onrender.com/api/blog', { title: title, blog: Content }).then(
             function (data) {
                 console.log("Data send to server successfully")
                 console.log(data.data)
@@ -43,7 +43,7 @@ function Blog() {
     }
 
     useEffect(() => {
-        axios.post('http://localhost:7000/api/blog').then(
+        axios.post('https://blog-mern-backend-7vnd.onrender.com/api/blog').then(
             function (data) {
                 console.log("Data send to server successfully")
                 const allTitle = []
